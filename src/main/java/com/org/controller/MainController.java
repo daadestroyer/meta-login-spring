@@ -12,15 +12,7 @@ import java.security.Principal;
 public class MainController {
 
     @GetMapping
-    public String getUser(Principal user , Model model) {
-        model.addAttribute("user",user);
-        System.out.println(user.getName());
-        return "redirect:/dashboard";
-    }
-
-    @GetMapping("/dashboard")
-    public String dashboard(){
-        System.out.println("redirecting to dashboard");
-        return "dashboard";
+    public Principal getUser(Principal user) {
+        return user;
     }
 }
