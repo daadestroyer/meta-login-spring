@@ -13,7 +13,7 @@ public class OAuth2Configuration extends WebSecurityConfigurerAdapter {
         http
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/login**", "/webjars/**", "/error**")
+                .antMatchers("/logout","/", "/login**", "/webjars/**", "/error**")
                 .permitAll()
                 .anyRequest()
                 .authenticated();
